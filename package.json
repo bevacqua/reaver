@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git://github.com/bevacqua/reaver.git"
   },
-  "scripts": {
-    "reaver": "reaver"
+  "bin": {
+    "reaver": "bin/reaver"
   },
   "dependencies": {
     "minimist": "^1.1.0"
