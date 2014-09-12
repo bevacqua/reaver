@@ -1,3 +1,7 @@
+# 1.1.2 Absolute Manifest
+
+- The `--manifest` option uses absolute paths
+
 # 1.1.1 Domestic Violence
 
 - Exposes a manifest if `--manifest` is passed

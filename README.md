@@ -18,7 +18,7 @@ The API exposes a function.
 
 Moves the specified file(s), appending to their paths a hash of their contents. Directories and missing files are ignored.
 
-If a `manifest: true` option is passed, it returns a map of file paths to the resulting hashes.
+If a `manifest: true` option is passed, it returns a map of file paths to the resulting hashes. The manifest always uses absolute paths.
 
 ## CLI
 

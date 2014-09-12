@@ -35,10 +35,11 @@ function api (files, options) {
   files.forEach(move);
 
   function move (file) {
-    if (notfile(file)) {
+    var absolute = path.resolve(file);
+    if (notfile(absolute)) {
       return;
     }
-    rename(file, rev(file, read(file)));
+    rename(absolute, rev(absolute, read(absolute)));
   }
 
   function rename (from, to) {
