@@ -46,7 +46,7 @@ function api (files, options) {
     fs.renameSync(from, to);
   }
 
-  return options && options.manifest ? manifest : void 0;
+  return options && options.manifest ? manifest : null;
 }
 
 

@@ -1,4 +1,4 @@
-# 1.1.0 Manifest
+# 1.1.1 Domestic Violence
 
 - Exposes a manifest if `--manifest` is passed
 

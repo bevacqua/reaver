@@ -5,4 +5,7 @@
 var argv = require('minimist')(process.argv.slice(2));
 var reaver = require('..');
 
-reaver(argv._, argv);
+var manifest = reaver(argv._, argv);
+if (manifest) {
+  console.log(JSON.stringify(manifest, null, 2));
+}
