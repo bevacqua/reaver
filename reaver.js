@@ -29,15 +29,25 @@ function rev (file, data) {
   return target;
 }
 
-function api (files) {
+function api (files, options) {
+  var manifest = {};
+
   files.forEach(move);
+
+  function move (file) {
+    if (notfile(file)) {
+      return;
+    }
+    rename(file, rev(file, read(file)));
+  }
+
+  function rename (from, to) {
+    manifest[from] = to;
+    fs.renameSync(from, to);
+  }
+
+  return options && options.manifest ? manifest : void 0;
 }
 
-function move (file) {
-  if (notfile(file)) {
-    return;
-  }
-  fs.rename(file, rev(file, read(file)));
-}
 
 module.exports = api;

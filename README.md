@@ -14,19 +14,21 @@ npm install --save-dev reaver
 
 The API exposes a function.
 
-### `reaver(files)`
+### `reaver(files, options)`
 
 Moves the specified file(s), appending to their paths a hash of their contents. Directories and missing files are ignored.
+
+If a `manifest: true` option is passed, it returns a map of file paths to the resulting hashes.
 
 ## CLI
 
 Usage
 
 ```shell
-reaver [file] [file] [file]
+reaver [options] [file] [file] [file]
 ```
 
-Invokes the `reaver(files)` API method, using `minimist` for option parsing.
+Invokes the `reaver(files, options)` API method, using `minimist` for option parsing.
 
 
 ## Example
