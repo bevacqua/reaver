@@ -1,0 +1,23 @@
+{
+  "name": "reaver",
+  "description": "Minimal asset revving CLI and API",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bevacqua/reaver",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "main": "reaver.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/reaver.git"
+  },
+  "scripts": {
+    "reaver": "reaver"
+  },
+  "dependencies": {
+    "minimist": "^1.1.0"
+  }
+}
