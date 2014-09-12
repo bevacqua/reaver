@@ -28,6 +28,18 @@ reaver [file] [file] [file]
 
 Invokes the `reaver(files)` API method, using `minimist` for option parsing.
 
+
+## Example
+
+Usage example below
+
+```shell
+touch foo{,.js}
+reaver *
+ls
+# foo.d41d8cd9    foo.d41d8cd9.js
+```
+
 # License
 
 MIT
