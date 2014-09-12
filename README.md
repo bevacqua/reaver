@@ -1,6 +1,6 @@
 # reaver
 
-> Minimal asset revving CLI and API
+> Minimal asset hashing CLI and API
 
 Use as a CLI or programmatically.
 

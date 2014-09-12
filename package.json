@@ -1,6 +1,6 @@
 {
   "name": "reaver",
-  "description": "Minimal asset revving CLI and API",
+  "description": "Minimal asset hashing CLI and API",
   "version": "1.0.0",
   "homepage": "https://github.com/bevacqua/reaver",
   "author": {
