@@ -1,3 +1,7 @@
+# 1.2.0 Reaver Revolution
+
+- Introduced `rev` method
+
 # 1.1.2 Absolute Manifest
 
 - The `--manifest` option uses absolute paths

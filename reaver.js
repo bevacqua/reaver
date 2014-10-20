@@ -50,5 +50,6 @@ function api (files, options) {
   return options && options.manifest ? manifest : null;
 }
 
+api.rev = rev;
 
 module.exports = api;

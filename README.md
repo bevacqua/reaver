@@ -20,6 +20,10 @@ Moves the specified file(s), appending to their paths a hash of their contents. 
 
 If a `manifest: true` option is passed, it returns a map of file paths to the resulting hashes. The manifest always uses absolute paths.
 
+### `reaver.rev(file, data)`
+
+This method will just return the hashed filename based on the provided data, without accessing the file system.
+
 ## CLI
 
 Usage
