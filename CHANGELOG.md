@@ -1,3 +1,7 @@
+# 2.0.0 Careful Consideration
+
+- Added `--consider` option for circular dependencies
+
 # 1.2.0 Reaver Revolution
 
 - Introduced `rev` method

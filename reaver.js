@@ -4,16 +4,25 @@ var fs = require('fs');
 var path = require('path');
 var crypto = require('crypto');
 
-function notfile (file) {
+function isfile (file) {
   try {
-    return fs.statSync(file).isDirectory();
+    return fs.statSync(file).isFile();
   } catch (e) {
-    return true;
+    return false;
   }
+}
+
+function notfile (file) {
+  return !isfile(file);
 }
 
 function read (file) {
   return fs.readFileSync(file, { encoding: 'utf8' });
+}
+
+function readInlined (file) {
+  var absolute = path.resolve(file);
+  return absolute + ':' + read(absolute) + ';';
 }
 
 function md5 (text) {
@@ -31,6 +40,9 @@ function rev (file, data) {
 
 function api (files, options) {
   var manifest = {};
+  var consider = options.consider || [];
+  var considered = Array.isArray(consider) ? consider : [consider];
+  var inlined = considered.filter(isfile).map(readInlined).join('');
 
   files.forEach(move);
 
@@ -39,7 +51,7 @@ function api (files, options) {
     if (notfile(absolute)) {
       return;
     }
-    rename(absolute, rev(absolute, read(absolute)));
+    rename(absolute, rev(absolute, read(absolute) + inlined));
   }
 
   function rename (from, to) {
